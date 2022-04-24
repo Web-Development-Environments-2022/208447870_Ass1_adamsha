@@ -1,7 +1,283 @@
+body {background-color: #cba135;}
+
 #menu
 {
 	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	width: 100%;
-	height: 35px;
-	background: white;
+	height: 50px;
+	padding: 10px 90px;
+	background: #9bddff;
+	box-sizing: content-box;
+	box-shadow: 1px 1px 2px black, 0 0 10px rgb(13, 13, 34), 0 0 5px darkblue;;
+	border-bottom: 0px;
+
+
+
+	
 }
+
+a{
+	width: 100px;
+	display: block;
+	padding: 20px 15px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0 0 0 150px;
+	padding: 0;
+  }
+
+ li{
+	align-items: center;
+	top: 0;
+	list-style: none;
+	border-right: 4px solid #23297a;
+	
+	display: inline;
+	float: left;
+	font-weight: bolder;
+	height: 50px;
+	
+}
+
+
+
+
+ li a{
+	padding: 15px 30px;
+	text-transform: capitalize;
+	display: block;
+	background-color: #9bddff;
+}
+
+/* normal unvisited link */
+ li link{
+	color: #f0a308;
+	font-style: oblique;
+	font-weight: bold;
+}
+
+/* the links when they were already visited */
+ li :visited{
+	color: #bb7c086e;
+	padding: 14px 25px;
+	text-decoration: none;
+}
+
+/* the links when you hover over them */
+ li :hover{
+	color: #000;
+}
+
+/* the color of the link when it is active */
+ a:active {
+	color: rgb(0, 255, 106);
+  }
+
+.TrumpLogo{
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	display: block;
+	position: fixed;
+	-moz-box-shadow: 0px 0px 4px rgba(26, 3, 175, 0.55);
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	z-index: 200; /* the stack order: foreground */
+	margin: auto;
+
+}
+
+.HeadersText{
+	position: relative;
+	color: #1e9ddd;
+    background-color: #cba135;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 60px;
+	padding: 10px 50px;
+	margin-bottom: auto;
+	text-align: center;
+	text-transform: uppercase;
+	text-rendering: optimizeLegibility;
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.cut-diamond {
+background: #b9f2ff;
+height: 20px;
+text-align: center;
+transform:rotate(45deg);
+width:20px;
+border-style: solid;
+margin: 20px;
+float: left;
+text-decoration: dashed;
+text-align: center;
+
+}
+
+.timeline{
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 700px;
+	position: relative;
+}
+
+.timeline__content-title{
+	font-weight: normal;
+	font-size: 66px;
+	margin:  -10px 0 0 0;
+	padding: 0 10px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: #801818;
+}
+
+.timeline__content-desc{
+	margin-left: 0px;
+	font-size: 15px;
+	box-sizing: border-box;
+	color: #23297a;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: normal;
+	line-height: 25px;
+}
+
+.timeline::before{
+	position: absolute;
+	left: 51%;
+	width: 2px;
+	height: 100%;
+	margin-right: 5px;
+	content: "";
+	background: #100c08;
+}
+
+.timeline-item{
+	padding: 40px 0;
+	opacity: 0.7;
+	filter: brightness();
+	box-sizing: border-box;
+	width: calc(50% - 40px);
+	display: flex;
+	position: relative;
+}
+
+.timeline-item::before{
+	content: attr(data-text);
+	letter-spacing: 3px;
+	width: 100%;
+	position: absolute;
+	font-size: 13px;
+	color: rgba(255,255,255,0.5);
+	font-family: sans-serif;
+	border-left: 2px solid rgba(255,255,255,0.5);
+	top:70%;
+	margin-top: -5px;
+	padding-left: 15px;
+	opacity: 0;
+	right: calc(-100% - 56px);
+}
+
+.timeline-item:nth-child(even){
+	align-self: flex-end;
+}
+
+.timeline-item:nth-child(even)::before{
+	right: auto;
+	text-align: right;
+	left: calc(-100% - 56px);
+	padding-left: 0;
+	border-left: none;
+	border-right: 2px solid rgba(255,255,255,0.5);
+	padding-right: 15px;
+} 
+
+/* .timeline-item{
+	align-self: baseline;
+	width: 100%;
+	padding: 0 30px 150px 80px;
+}
+
+.timeline-item::before{
+	left: 10px;
+	padding: 0;
+	top: 50px;
+	text-align: center;
+	width: 60px;
+	border: none;
+} */
+
+.timeline-item:last-child{
+	padding-bottom: 40px;
+}
+
+.timeline__img{
+	max-width: 100%;
+	box-shadow: 0 10px 15px #cba135;
+	filter: brightness();
+	position: relative;
+}
+
+.timeline-container{
+	width: 100%;
+	padding: 80px;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.timeline-container::before{
+	content: "";
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #cba135;
+}
+
+.timeline-header{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+	position: relative;
+	text-decoration:#801818;;
+}
+
+.timeline-header__title{
+	color: #801818;
+	font-size: 46px;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: normal;
+	margin: 0;
+}
+
+.timeline-header__subtitle{
+	color: #801818;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	letter-spacing: 5px;
+	margin: 10px 0 0 0;
+	font-weight: normal;
+	align-items: center;
+}
+
+
+
+
+
