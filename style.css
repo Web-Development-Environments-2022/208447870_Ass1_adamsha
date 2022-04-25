@@ -112,6 +112,7 @@ ul {
     text-shadow: 
       4px 4px 0px #d5d5d5, 
       7px 7px 0px rgba(0, 0, 0, 0.2);
+	  background-image:url("Donald Trump Images/New York.jpg");
 }
 
 
@@ -208,20 +209,6 @@ text-align: center;
 	padding-right: 15px;
 } 
 
-/* .timeline-item{
-	align-self: baseline;
-	width: 100%;
-	padding: 0 30px 150px 80px;
-}
-
-.timeline-item::before{
-	left: 10px;
-	padding: 0;
-	top: 50px;
-	text-align: center;
-	width: 60px;
-	border: none;
-} */
 
 .timeline-item:last-child{
 	padding-bottom: 40px;
@@ -316,11 +303,8 @@ text-align: center;
 
   .emoji-drawer {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     width: 100px;
-
     margin-bottom: 32px;
     transition: opacity 0.2s;
 }
@@ -339,6 +323,20 @@ text-align: center;
     cursor: pointer;
 }
 
+table, th, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+  }
+  th, td {
+background-color: #96D4D4;
+}
+
+tr:hover {background-color: #ce2418;}
+
+.web{
+	color: #232b2b;
+	align-items: center;
+}
 
 
 
