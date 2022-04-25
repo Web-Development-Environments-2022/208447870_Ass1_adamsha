@@ -283,6 +283,65 @@ text-align: center;
 	margin-right: auto;
   }
 
+  div.form
+  {
+	display: block;
+	text-align: center;
+	text-decoration: #1e9ddd;
+  }
+  form
+  {
+	  display: inline-block;
+	  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	  margin-left: auto;
+	  margin-right: auto;
+	  text-align: left;
+	  padding: 0;
+	  margin: 0;
+	  box-sizing: border-box;
+	  box-shadow: 3px 3px 3px #B22234;
+	  background-image:url("Donald Trump Images/Usa Flag.webp");
+
+		/* Control the height of the image */
+		min-height: 250px;
+		max-height: 700px;
+		max-width: fit-content;
+
+		/* Center and scale the image nicely */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+  }
+
+  .emoji-drawer {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100px;
+
+    margin-bottom: 32px;
+    transition: opacity 0.2s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.emoji {
+    text-align: center;
+    font-size: 24px;
+    padding: 8px;
+}
+
+.emoji:hover {
+    cursor: pointer;
+}
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -206,27 +207,58 @@
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <h2 class="HeadersText">Contact Me</h2>
+
+<div class="form">
+  <form name="Form1" method="post" action="mailto::adamsha@post.bgu.ac.il" enctype="text/plain">
+    <label for="Email" autocomplete="on">Email To:</label><br>
+    <input type="text"  value="adamsha@post.bgu.ac.il"><br>
+    <label for="text">The contents of the email:</label><br>
+    <input type="text" id="lname" name="Email's Content:" placeholder="Add the contents of the email right here" size="80" style="height: 100px;" class="emojify">
+    <br/>
+    <br/>
+      <!-- Prevent implicit submission of the form -->
+  <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+
+  <!-- ... -->
+  <div id="drawer" class="emoji-drawer hidden"> 
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
+  </div>
+
+  <input type="submit" value="Submit" onclick="alert('You will now move on to outlook')" size="20">
+
+
+
+  </form>
+
+  <button onclick="toggleEmojiDrawer()">Emojis</button>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
 </section>
+
 
 
 <script type="text/javascript">
@@ -242,5 +274,23 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+
+<script type="text/javascript">
+function addEmoji(emoji) {
+  let inputEle = document.getElementById('lname');
+  
+  lname.value += emoji;
+}
+
+function toggleEmojiDrawer() {
+  let drawer = document.getElementById('drawer');
+  
+  if (drawer.classList.contains('hidden')) {
+    drawer.classList.remove('hidden');
+  } else {
+    drawer.classList.add('hidden');
+  }
+}
+  </script>
 </body>
 </html>
